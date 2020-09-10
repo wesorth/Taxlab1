@@ -104,6 +104,6 @@ public class TaxLab {
 	    
 	    
 	    
-	    System.out.println("I am filing as " + input + " and I earned $" + inc);  // Output user input
+	    System.out.println("I am filing as " + input + " and I earned $" + inc);  // Output user input // Change
 	  }
 }
