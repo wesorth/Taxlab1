@@ -52,7 +52,7 @@ public class TaxLab {
 		else if(x>408200 && x<=612500) {//sixth tax bracket 408201-612500
 			tax = 1940 + 7146 + 19679 + 36732 + 27760 + 0.35*(x-408200);
 		}
-		else if(x>510300) {//seventh tax bracket >612500
+		else if(x>612500) {//seventh tax bracket >612500
 			tax = 1940 + 7146 + 19679 + 36732 + 27760 + 71505 + 0.37*(x-612500);
 		}
 		else {//in case someone enters a negative income
