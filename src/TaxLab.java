@@ -72,6 +72,54 @@ public class TaxLab {
 		}
 		return;
 	}//end of marriedJointWidow function
+	public static void marriedFilingSeperately(int x) {
+		double tax = 0; // calculate the tax owed
+		if (x <= 9700) {
+			tax = x * .10;
+		}
+		else if (x <= 39475) {
+			tax = 9700 * .10 + (x - 9700) *.12;
+		}
+		else if (x <= 84200) {
+			tax = 9700 * .10 + (39475 - 9700) * .12 + (x - 39475) * .22;
+		}
+		else if (x <= 160725) {
+			tax = 9700 * .10 + (39475 - 9700) * .12 + (84200 - 39475) * .22 + (x - 84200) * .24;
+		}
+		else if (x <= 204100) {
+			tax = 9700 * .10 + (39475 - 9700) * .12 + (84200 - 39475) * .22 + (160725 - 84200) * .24 + (x - 160725) * .32;
+		}
+		else if (x <= 306175) {
+			tax = 9700 * .10 + (39475 - 9700) * .12 + (84200 - 39475) * .22 + (160725 - 84200) * .24 + (204100 - 160725) * .35 + (x - 204100) * .35;
+		}
+		else {
+			tax = 9700 * .10 + (39475 - 9700) * .12 + (84200 - 39475) * .22 + (160725 - 84200) * .24 + (204100 - 160725) * .35 + (306175 - 204100) * .35 + (x - 306175) * .37;
+		}
+	}
+	public static void headOfHousehold(int x) {
+		double tax = 0; // initialize tax
+		if (x <= 13850) {
+			tax = x * .10;
+		}
+		else if (x <= 52850) {
+			tax = 13850 * .10 + (x - 13850) * .12;
+		}
+		else if (x <= 84200) {
+			tax = 13850 * .10 + (52850 - 13850) * .12 + (x - 52850) * .22;
+		}
+		else if (x <= 160700) {
+			tax = 13850 * .10 + (52850 - 13850) * .12 + (84200 - 52850) * .22 + (x - 84200) * .24;
+		}
+		else if (x <= 204100) {
+			tax = 13850 * .10 + (52850 - 13850) * .12 + (84200 - 52850) * .22 + (160700 - 84200) * .24 + (x - 160700) * .32;
+		}
+		else if (x <= 510300) {
+			tax = 13850 * .10 + (52850 - 13850) * .12 + (84200 - 52850) * .22 + (160700 - 84200) * .24 + (204100 - 160700) * .32 + (x - 204100) * .35;
+		}
+		else {
+			tax = 13850 * .10 + (52850 - 13850) * .12 + (84200 - 52850) * .22 + (160700 - 84200) * .24 + (204100 - 160700) * .32 + (510300 - 204100) * .35 + (x - 510300) * .37;
+		}
+	}
 	
 	public static void main(String[] args) {
 	    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
@@ -87,7 +135,8 @@ public class TaxLab {
 	    	TaxLab.single(inc);//calling function single
 	    	break;
 	    case "Head of Household" :
-	    	System.out.println("IT WORKED");
+	    	TaxLab.headOfHousehold(inc);
+	    	//System.out.println("IT WORKED");
 	    	break;
 	    case "Married filing jointly" :
 	    	TaxLab.marriedJointWidow(inc);//calling function marriedJointWidow
@@ -96,7 +145,8 @@ public class TaxLab {
 	    	TaxLab.marriedJointWidow(inc);//calling function marriedJointWidow
 	    	break;
 	    case "Married filing seperately" :
-	    	System.out.println("IT WORKED");
+	    	TaxLab.marriedFilingSeperately(inc);
+	    	//System.out.println("IT WORKED");
 	    	break;
 	    default : 
 	    	System.out.println("Please enter the option exactly as shown.");
