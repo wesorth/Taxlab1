@@ -120,7 +120,6 @@ public class TaxLab {
 	    String input = myObj.nextLine();  // Read user input
 	    Scanner income = new Scanner(System.in);  // Create a Scanner object
 	    System.out.println("How much did you make this year?");
-
 	    Integer inc = income.nextInt();  // Read user input
 	    System.out.println("I am filing as " + input + " and I earned $" + inc);  // Output user input // Change
 	    switch (input){//switch through inputs
