@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class TaxLab {
 	public static void single(int x) {//function to calculate taxes for someone filing single
+		//	Test
 		double tax=0;//variable to calculate tax owed
 		if(x<=9700 && x>0) {//first tax bracket 0-9700
 			tax = 0.10*x;
